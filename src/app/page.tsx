@@ -5,6 +5,23 @@ export default function Home() {
   // myGreetings =6
   myGreetings.toLowerCase()
   console.log(myGreetings)
+  let userID = 123
+  userID.toFixed()
+  const isLoggedIn: boolean = false 
+  //normally we don't assign type to all the value. we should only assign value when we get something from an api call
+  let hero;
+  function getHero(){
+    return "thor"
+  }
+  hero = getHero()
+  console.log(hero)
+  //avoid "any" data type at all cost 
+  function addTwo(num : number){
+    return num +2
+  }
+  addTwo(5)
+  function isLogged(email:string,name:string,isPaid :boolean){}
+  isLogged("email","sakib",true)
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
