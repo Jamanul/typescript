@@ -20,7 +20,7 @@ createUser('sakib',100)
 type User ={
     name: string,
     email: string,
-    isPaid: boolean
+    isPaid?: boolean
 }
 
 const getUser =(user:User):User=>{
@@ -28,3 +28,21 @@ const getUser =(user:User):User=>{
 }
 
 getUser({name:"L",email:"L",isPaid:true})
+type User2 ={
+    name: string,
+    email: string,
+    isPaid?: boolean
+}
+
+const getUser2 =(user:User2):User2=>{
+    return {name:user.name,email:user.email}
+}
+
+getUser2({name:"L",email:"L",isPaid:true})
+
+
+type myNumber ={
+    mobile : string
+}
+
+type userDetails = myNumber & User2
