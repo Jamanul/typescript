@@ -32,3 +32,18 @@ tUser = [11,'sm',true]
 type UserT = [number,string]
 
 const user :UserT = [12,'w@gmail.com']
+
+interface UserInterface {
+    name: string,
+    email: string,
+    getNumber:() =>number,
+    getCoupon(couponName:string,value: number): string
+}
+
+const hitesh:UserInterface = {
+    name:"hello",
+    email:'h@h.com',
+    getCoupon: (name:'qwe',value:10)=>{return 'qw'},
+    getNumber: ()=>{return 123}
+}
+
