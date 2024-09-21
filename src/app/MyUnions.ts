@@ -40,10 +40,25 @@ interface UserInterface {
     getCoupon(couponName:string,value: number): string
 }
 
-const hitesh:UserInterface = {
+interface Admin2 extends UserInterface {
+    role: 'admin'
+}
+
+const hitesh:Admin2 = {
     name:"hello",
+    role: 'admin',
     email:'h@h.com',
     getCoupon: (name:'qwe',value:10)=>{return 'qw'},
     getNumber: ()=>{return 123}
 }
 
+class UserClass {
+    email:string
+    name: string
+    constructor(email:string,name:string){
+        this.email =email
+        this.name = name
+    }
+}
+
+const hitesh3 = new UserClass('h@h','no')
